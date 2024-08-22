@@ -15,7 +15,45 @@ This project provides a RESTful API for managing vehicles and organizations. The
 
 
 
-## API Endpoints
+
+
+# Vehicle API
+
+
+### `GET /api/vehicles/decode/:vin`
+
+#### Description
+Retrieve detailed information about a vehicle using its Vehicle Identification Number (VIN). This endpoint decodes the VIN by calling the NHTSA API and returns specific details about the vehicle.
+
+#### Parameters
+- **vin** (path parameter): A 17-character alphanumeric VIN.
+
+#### Example Request
+```http
+GET http://localhost:3000/api/vehicles/decode/YV1RS61R922101022
+```
+
+#### Response
+**Success (200 OK)**
+```json
+{
+  "manufacturer": "Volvo",
+  "model": "S60",
+  "year": "2002"
+}
+```
+
+**Error (400 Bad Request)**
+```json
+{
+  "message": "Invalid VIN format"
+}
+```
+
+
+#### Notes
+- The VIN must be a valid 17-character string.
+- The endpoint retrieves `manufacturer`, `model`, and `year` from the NHTSA API.
 
 
 ### Vehicle Endpoints
