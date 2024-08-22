@@ -6,19 +6,7 @@ VIDEO DEMO-
 
 This project provides a RESTful API for managing vehicles and organizations. The API is built using Node.js, Express, and MongoDB, with features like VIN decoding using the NHTSA API, rate limiting, and organization policy management.
 
-## Table of Contents
 
-- [Installation](#installation)
-- [Project Structure](#project-structure)
-- [API Endpoints](#api-endpoints)
-  - [Organization Endpoints](#organization-endpoints)
-  - [Vehicle Endpoints](#vehicle-endpoints)
-- [Validation and Error Handling](#validation-and-error-handling)
-- [Rate Limiting](#rate-limiting)
-- [Technologies Used](#technologies-used)
-- [License](#license)
-
-## Installation
 
 ### Prerequisites
 
